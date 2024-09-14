@@ -1,0 +1,21 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95em 1.8em;
+  border: none;
+  border-radius: 0.625em;
+  background: #7fb64c;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16.2px;
+  @extend .transition;
+  
+  @include media-breakpoint-down(xs) {
+    font-size: 15px;
+  }
+  
+  &:hover {
+    opacity: 0.85;
+  }
+}

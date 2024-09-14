@@ -1,0 +1,16 @@
+// @mixin parallax-bg($top: 50%) {
+//   width: 100%;
+//   height: auto;
+//   position: absolute;
+//   left: 0;
+//   top: $top;
+//   will-change: transform;
+//   pointer-events: none;
+//   user-select: none;
+//   transform: translateY(-50%);
+
+//   @include media-breakpoint-only(xs) { 
+//     height: 120%;
+//     object-fit: cover;
+//   }
+// }

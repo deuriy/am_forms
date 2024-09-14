@@ -1,0 +1,28 @@
+{
+  "javascript": {
+    "globals": ["ymaps3", "__DEBUG__"]
+  },
+  "formatter": {
+    "lineWidth": 99,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "rules": {
+      "complexity": {
+        "useArrowFunction": "off",
+        "noUselessThisAlias": "off"
+      },
+      "correctness": {
+        "noUndeclaredVariables": {
+          "level": "error"
+        },
+        "noUnusedVariables": {
+          "level": "warn"
+        },
+        "noUnusedImports": {
+          "level": "warn"
+        }
+      }
+    }
+  }
+}

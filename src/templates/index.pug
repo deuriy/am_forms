@@ -1,0 +1,46 @@
+extends layouts/base
+
+block content
+  .container
+    form(action="/").postal-delivery-form
+      .postal-delivery-form__wrapper
+        .postal-delivery-form__header
+          h2.postal-delivery-form__title Completing the Postal Delivery Form
+        .postal-delivery-form__items
+          .postal-delivery-form__col
+            .postal-delivery-form__item
+              label(for="first_name").form-label.postal-delivery-form__label First Name
+              input(type="text" name="first_name" id="first_name" placeholder="Enter your first name" required).form-text
+            .postal-delivery-form__item
+              label(for="last_name").form-label.postal-delivery-form__label Last Name
+              input(type="text" name="last_name" id="last_name" placeholder="Enter your last name" required).form-text
+            .postal-delivery-form__item
+              label(for="phone_number").form-label.postal-delivery-form__label Phone Number
+              input(type="tel" name="phone_number" id="phone_number" placeholder="Enter your phone number" required).form-text
+            .postal-delivery-form__item
+              label(for="shipping_method").form-label.postal-delivery-form__label Shipping Method
+              input(type="text" name="shipping_method" id="shipping_method" placeholder="Enter your preferred shipping service" required).form-text
+            .postal-delivery-form__item
+              label(for="additional_delivery_instructions").form-label.postal-delivery-form__label Additional Delivery Instructions (optional)
+              textarea(name="additional_delivery_instructions" id="additional_delivery_instructions" placeholder="Add any special delivery instructions (optional)").form-textarea
+          .postal-delivery-form__col
+            .postal-delivery-form__item
+              label(for="country").form-label.postal-delivery-form__label Country
+              input(type="text" name="country" id="country" placeholder="Enter the destination country" required).form-text
+            .postal-delivery-form__item
+              label(for="city").form-label.postal-delivery-form__label City
+              input(type="text" name="city" id="city" placeholder="Enter your city" required).form-text
+            .postal-delivery-form__item
+              label(for="address_line_1").form-label.postal-delivery-form__label Address Line 1
+              input(type="text" name="address_line_1" id="address_line_1" placeholder="Enter your street address" required).form-text
+            .postal-delivery-form__item
+              label(for="address_line_2").form-label.postal-delivery-form__label Address Line 2 (optional)
+              input(type="text" name="address_line_2" id="address_line_2" placeholder="Apartment, suite, unit, etc. (optional)").form-text
+            .postal-delivery-form__item
+              label(for="state_province_region").form-label.postal-delivery-form__label State/Province/Region
+              input(type="text" name="state_province_region" id="state_province_region" placeholder="Enter your state, province or region" required).form-text
+            .postal-delivery-form__item
+              label(for="postal_zip_code").form-label.postal-delivery-form__label Postal/ZIP Code
+              input(type="text" name="postal_zip_code" id="postal_zip_code" placeholder="Enter your postal or ZIP code" required).form-text
+      .postal-delivery-form__actions
+        button(type="submit").btn.postal-delivery-form__submit-btn Save and submit the information

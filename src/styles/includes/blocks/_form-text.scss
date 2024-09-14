@@ -1,0 +1,26 @@
+.form-text {
+  width: 100%;
+  height: 51px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border: 1px solid #d1d1d1;
+  outline: none;
+  font-weight: 500;
+  font-size: 15px;
+  @extend .transition;
+  
+  @include media-breakpoint-down(xs) {
+    height: 45px;
+    padding-right: 12px;
+    padding-left: 12px;
+    font-size: 14px;
+  }
+  
+  &::placeholder {
+    opacity: 0.65;
+  }
+  
+  &:focus {
+    border-color: #a0a0a0;
+  }
+}

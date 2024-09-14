@@ -1,0 +1,5 @@
+.wrapper {
+  display: grid;
+  grid-template: auto auto 1fr auto / 100%;
+  min-height: 100%;
+}

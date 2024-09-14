@@ -1,0 +1,13 @@
+.logo {
+  width: 135px;
+  
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    background: #7EB22B;
+  }
+}

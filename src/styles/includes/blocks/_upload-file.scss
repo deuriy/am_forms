@@ -1,0 +1,16 @@
+.upload-file {
+  position: relative;
+  
+  &__input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+}

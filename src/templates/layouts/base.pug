@@ -1,0 +1,21 @@
+block vars
+doctype html
+html(lang="ru", data-bs-theme=`${bsTheme || "light"}`)
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="turbo-prefetch", content="false")
+    title Am forms
+    link(href="/img/logo_pic.svg", rel="icon", type="image/svg+xml")
+    link(href="/css/styles.css", rel="stylesheet")
+    script(src="/js/app.js", type="module")
+
+    block head_tail
+  body(class=`${bodyExtraClass || ""}`)
+    .wrapper
+      include ../blocks/header.pug
+
+      main.main(class=`${mainExtraClass || ""}`)
+        block content
+
+      include ../blocks/footer.pug

@@ -1,0 +1,250 @@
+// $enable-dark-mode: true;
+
+// Color system
+// $primary: #c8b929;
+// $gray: #99a2ad;
+$gray: #939c9f;
+$gray2: #dde1e3;
+$gray3: #e8e9ea;
+$gray4: #eaeced;
+$gray5: #c8ccce;
+$gray6: #efecea;
+$lightgray: #f4f4f5;
+$lightgray2: #f5f5f5;
+$muted: #656771;
+$muted2: #7e7f8c;
+$foreground: #2d4047;
+$background: #f4f4f4;
+$primary: $foreground;
+$light: #fafafa;
+$white: #fff;
+$black: #000;
+$vivid: #a22c32;
+$success: #53bba5;
+$yellow: #ffa202;
+$orange: #f7941d;
+$warning: #f35607;
+$theme-colors: (
+  "primary": $primary,
+  "light": $light,
+  "dark": $foreground,
+  "vivid": $vivid,
+  "white": $white,
+);
+$colors: ();
+
+// Options
+$enable-dark-mode: true;
+$enable-rfs: false;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// Typography
+$font-family-base:
+  'Montserrat',
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji";
+// $headings-font-family: "Condens", "Times New Roman", serif;
+$headings-font-family: $font-family-base;
+$font-size-base: 1rem;
+// $font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.125;
+$h1-font-size: $font-size-base * 4;
+$small-font-size: calc(1em - 1px);
+$small-font-size2: calc(1em - 2px);
+$headings-line-height: 1;
+$headings-margin-bottom: 1.5rem;
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+$hr-opacity: 0.15;
+
+// Grid columns
+$grid-gutter-width: 2rem;
+// $grid-gutter-width: 32px;
+
+// Body
+
+$body-color: $foreground;
+$body-bg: $background;
+$font-weight-normal: 500;
+
+// Links
+
+$link-decoration: none;
+$link-color: $foreground;
+
+// Icons
+
+$icon-size: 1.5rem;
+
+// Forms
+$form-label-font-size: $font-size-base * 0.875;
+$input-bg: $light;
+$input-border-color: $input-bg;
+$input-border-radius: 0;
+$input-btn-padding-y: 0.563rem;
+$input-btn-line-height: 1.3335;
+$input-btn-font-size: 1.125rem;
+$input-placeholder-color: $gray;
+$form-label-color: $muted2;
+$form-check-input-width: 1.5em;
+$form-check-margin-bottom: 1em;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,%0A%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.58 18 2 14.42 2 10C2 5.58 5.58 2 10 2C14.42 2 18 5.58 18 10C18 14.42 14.42 18 10 18ZM15 10C15 12.7614 12.7614 15 10 15C7.23858 15 5 12.7614 5 10C5 7.23858 7.23858 5 10 5C12.7614 5 15 7.23858 15 10Z' fill='#{$primary}'/%3E%3C/svg%3E%0A");
+$form-check-input-checked-bg-color: transparent;
+
+// Buttons
+$btn-border-radius: 0;
+$btn-disabled-opacity: 1;
+$btn-padding-y: 0.4688rem;
+$btn-line-height: 1.5;
+
+// Grid
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 576px,
+  md: 768px,
+  xl: 1200px,
+  xxl: 1920px,
+);
+
+// Containers
+// $container-max-widths: (
+//   xl: 1848px,
+//   xxl: 1920px,
+// );
+
+$container-max-widths: (
+  xl: 1170px,
+  xxl: 1180px,
+);
+
+// Modals
+$modal-content-border-radius: 0;
+$modal-header-border-width: 0;
+$modal-inner-padding: 1.1875rem;
+$modal-dialog-margin: 1rem;
+
+// Utilities
+
+$utilities: (
+  "width": (
+    property: width,
+    class: w,
+    values: (
+      100: 100%,
+    ),
+  ),
+  "color": (
+    property: color,
+    class: text,
+    values: (
+      primary: $primary,
+      muted: $muted,
+      muted2: $muted2,
+      white: $white,
+      vivid: $vivid,
+    ),
+  ),
+  "text-align": (
+    responsive: true,
+    property: text-align,
+    class: text,
+    values: (
+      start: left,
+      end: right,
+      center: center,
+    ),
+  ),
+  "margin-bottom": (
+    property: margin-bottom,
+    class: mb,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "negative-margin-top": (
+    property: margin-top,
+    class: mt,
+    values: (
+      n1: $spacer * -0.25,
+      n2: $spacer * -0.5,
+      n3: $spacer * -1,
+      n4: $spacer * -1.5,
+      n5: $spacer * -3,
+    ),
+  ),
+  "line-height": (
+    property: line-height,
+    class: lh,
+    values: (
+      1: 1,
+      sm: $line-height-sm,
+      base: $line-height-base,
+      lg: $line-height-lg,
+    ),
+  ),
+
+  "padding-x": (
+    property: padding-right padding-left,
+    class: px,
+    values: $spacers,
+  ),
+);
+
+// Dropdowns
+$dropdown-padding-x: 8px;
+$dropdown-padding-y: 8px;
+$dropdown-min-width: 100%;
+$dropdown-border-width: 0;
+$dropdown-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+$dropdown-border-radius: 12px;
+$dropdown-bg: $white;
+
+// Offcanvas
+$offcanvas-horizontal-width: 528px;
+$offcanvas-border-width: 0;
+$offcanvas-bg-color: $lightgray;
+$offcanvas-backdrop-opacity: 0.4;
+$offcanvas-bg-color: $white;
+$offcanvas-padding-y: 32px;
+$offcanvas-padding-x: 32px;
+
+// Breadcrumbs
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-font-size: 14px;
+$breadcrumb-divider-color: $body-color;
+$breadcrumb-active-color: $body-color;
+
+// Tooltips
+$tooltip-opacity: 0.5;
+$tooltip-padding-x: 12px;
+$tooltip-padding-y: 7px;
+$tooltip-arrow-width: 6px;
+$tooltip-arrow-height: 5px;
+$tooltip-border-radius: 4px;
+$tooltip-font-size: 12px;
