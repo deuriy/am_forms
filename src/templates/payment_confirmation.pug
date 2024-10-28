@@ -1,0 +1,44 @@
+extends layouts/base
+
+block content
+  .container
+    form(action="/").postal-delivery-form.postal-delivery-form--payment-confirmation
+      .postal-delivery-form__wrapper
+        .postal-delivery-form__header
+          h2.postal-delivery-form__title Підтвердження отримання платежу
+        .postal-delivery-form__items
+          .postal-delivery-form__col
+            .postal-delivery-form__item
+              label(for="account_type").form-label.postal-delivery-form__label Тип рахунка
+              .postal-delivery-form__item-value Swift Margaryta
+              //- input(type="text" name="account_type" id="account_type" placeholder="Тип рахунка" required).form-text
+            .postal-delivery-form__item.postal-delivery-form__item--has-suffix
+              label(for="amount_actually_received").form-label.postal-delivery-form__label Фактично отримана сума
+              .postal-delivery-form__item-suffix-wrapper
+                input(type="number" name="amount_actually_received" id="amount_actually_received" placeholder="Введіть фактичну суму отримання" required).form-text
+                span.postal-delivery-form__item-suffix USDT TRC 20
+            .postal-delivery-form__item.postal-delivery-form__item--has-suffix
+              label(for="shortage").form-label.form-label--error.postal-delivery-form__label Недостача
+              .postal-delivery-form__item-suffix-wrapper
+                input(type="number" name="shortage" id="shortage" value="3993.00" readonly).form-text.form-text--error
+                span.postal-delivery-form__item-suffix USDT TRC 20
+            .postal-delivery-form__item
+              label(for="phone_number").form-label.postal-delivery-form__label Завантажте підтвердження
+              .upload-file
+                input(type="file" name="upload_confirmation" id="upload_confirmation" required).upload-file__input
+                label(for="upload_confirmation").upload-file__label Додайте фото
+                //- .upload-file__wrapper
+                //-   label(for="upload_confirmation").btn-default.btn-default--upload.upload-file__btn Upload Files
+                  //- .upload-file__note
+                  //-   p Max. file size: 300mb
+                  //-   p This could include a pitch deck or other supporting documents.
+            .postal-delivery-form__item
+              label(for="comment").form-label.postal-delivery-form__label Коментар (необов’язково)
+              textarea(name="comment" id="comment" placeholder="Додайте коментар...").form-textarea
+          .postal-delivery-form__col
+            .postal-delivery-form__img-wrapper
+              img(src="https://place-hold.it/442x442/000000" alt="").postal-delivery-form__img
+              .postal-delivery-form__amount-received #[strong 1,003.99] USDT TRC 20
+      .postal-delivery-form__actions
+        a(href="javascript:;").link.postal-delivery-form__cancel-payment-link Відмінити платіж
+        button(type="submit").btn.postal-delivery-form__submit-btn Підтвердити зарахування платежу

@@ -6,11 +6,20 @@
     visibility: hidden;
     position: absolute;
   }
-  
-  &__wrapper {
+
+  &__label {
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 20px;
+    place-content: center;
+    height: 150px;
+    border: 2px solid #e5e5e5;
+    color: #A9A9A9;
+    cursor: pointer;
   }
+  
+  // &__wrapper {
+  //   display: grid;
+  //   grid-template-columns: auto 1fr;
+  //   align-items: center;
+  //   gap: 20px;
+  // }
 }

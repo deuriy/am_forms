@@ -23,4 +23,19 @@
   &:focus {
     border-color: #a0a0a0;
   }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  &--error {
+    font-weight: 500;
+    color: #d02d20;
+  }
 }

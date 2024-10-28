@@ -54,7 +54,7 @@
     padding: 65px 54px 34px;
     
     @include media-breakpoint-down(xl) {
-      gap: 50px;
+      gap: 30px;
       padding: 40px;
     }
     
@@ -62,6 +62,14 @@
       grid-template-columns: 100%;
       gap: 20px;
       padding: 20px;
+    }
+  }
+
+  &__col {
+    padding-right: 15px;
+    
+    @include media-breakpoint-down(xl) {
+      padding-right: 0;
     }
   }
 
@@ -75,17 +83,16 @@
     }
   }
 
-  &__item-wrapper {
+  &__item-suffix-wrapper {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 10px;
-  }
-
-  &__col {
-    padding-right: 15px;
+    gap: 17px;
+    padding-right: 22px;
     
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-down(xs) {
+      grid-template-columns: 100%;
+      gap: 10px;
       padding-right: 0;
     }
   }
@@ -94,15 +101,51 @@
     margin-bottom: 7px;
   }
 
-  &__actions {
-    padding: 33px 0;
+  &__item-value {
+    margin-top: 18px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  &__item-suffix {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  &__img-wrapper {
+    margin-top: 20px;
+    margin-left: 5px;
     text-align: center;
     
+    @include media-breakpoint-down(xs) {
+      margin: 0;
+    }
+  }
+
+  &__amount-received {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 33px 0;
+    
+    @include media-breakpoint-down(xl) {
+      gap: 80px;
+    }
+    
     @include media-breakpoint-down(md) {
+      gap: 40px;
       padding: 25px 0;
     }
     
     @include media-breakpoint-down(xs) {
+      flex-direction: column-reverse;
+      gap: 20px;
       padding: 20px 0;
     }
   }
@@ -112,4 +155,27 @@
       width: 100%;
     }
   }
+
+  &--payment-confirmation {
+    .postal-delivery-form__header {
+      @include media-breakpoint-up(xs) {
+        padding: 25px 0;
+      }
+    }
+
+    .postal-delivery-form__title {
+      &::before {
+        width: 1.64em;
+        height: 1.64em;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 32 32'%3E%3Cg fill='none' stroke='%234d4ab6' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2'%3E%3Cpath d='M16 10v2M16 20v2M14 20h3c1.1 0 2-.9 2-2s-.9-2-2-2h-2c-1.1 0-2-.9-2-2s.9-2 2-2h3'/%3E%3Cpath d='M16 6c5.5 0 10 4.5 10 10s-4.5 10-10 10S6 21.5 6 16v-3'/%3E%3Cpath d='m10 17-4-4-4 4M16 2c7.7 0 14 6.3 14 14s-6.3 14-14 14'/%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+
+    .postal-delivery-form__submit-btn {
+      @include media-breakpoint-up(xl) {
+        min-width: 395px;
+      }
+    }
+  }
+      
 }
