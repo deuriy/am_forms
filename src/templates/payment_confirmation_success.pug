@@ -1,0 +1,14 @@
+extends layouts/base
+
+block content
+  .container
+    form(action="/").postal-delivery-form.postal-delivery-form--payment-confirmation.postal-delivery-form--payment-confirmation-result
+      .postal-delivery-form__wrapper
+        .postal-delivery-form__header
+          h2.postal-delivery-form__title Підтвердження отримання платежу
+        .postal-delivery-form__content
+          .info-message.postal-delivery-form__info-message
+            h2.info-message__title ПЛАТІЖ УСПІШНО ПІДТВЕРДЖЕНИЙ!
+            .info-message__description
+              p Інформація про підтвердження автоматично надіслана відповідальному менеджеру
+            a(href="/").btn.info-message__btn ПОВЕРНУТИСЬ НА ГОЛОВНУ

@@ -1,0 +1,14 @@
+extends layouts/base
+
+block content
+  .container
+    form(action="/").postal-delivery-form.postal-delivery-form--payment-confirmation.postal-delivery-form--payment-confirmation-result
+      .postal-delivery-form__wrapper
+        .postal-delivery-form__header
+          h2.postal-delivery-form__title Підтвердження отримання платежу
+        .postal-delivery-form__content
+          .info-message.info-message--cancelled.postal-delivery-form__info-message
+            h2.info-message__title ЗАРАХУВАННЯ СКАСОВАНО!
+            .info-message__description
+              p Ви скасували платіж. Відповідна інформація про скасування автоматично надіслана відповідальному менеджеру
+            a(href="/").btn.info-message__btn ПОВЕРНУТИСЬ НА ГОЛОВНУ

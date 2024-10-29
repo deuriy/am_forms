@@ -6,13 +6,13 @@
   }
   
   &__header {
-    padding: 27px 0;
+    padding: 27px 20px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background: #f9f9f9;
     
     @include media-breakpoint-down(xs) {
-      padding: 15px 0;
+      padding: 15px;
     }
   }
 
@@ -26,11 +26,11 @@
     font-weight: 600;
     font-size: 22px;
     
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-down(xxl) {
       font-size: 19px;
     }
     
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(xl) {
       font-size: 16px;
     }
     
@@ -156,6 +156,31 @@
     }
   }
 
+  &__content {
+    padding: 217px 20px 300px;
+    
+    @include media-breakpoint-down(xxl) {
+      padding: 140px 20px 200px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      padding: 100px 20px 150px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 70px 20px 120px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 40px 20px 60px;
+    }
+  }
+
+  &__info-message {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &--payment-confirmation {
     .postal-delivery-form__header {
       @include media-breakpoint-up(xs) {
@@ -175,6 +200,18 @@
       @include media-breakpoint-up(xl) {
         min-width: 395px;
       }
+    }
+  }
+
+  &--payment-confirmation-result {
+    padding-bottom: 60px;
+    
+    @include media-breakpoint-down(xl) {
+      padding-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 20px;
     }
   }
       
